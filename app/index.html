@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI, all 55 PS5 trophies</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: official names, descriptions and grades, a cited guide for each, a platinum roadmap, missable flags, filters and a spoiler setting.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every trophy with its official name, description and grade, a guide in our own words with its sources, a roadmap to the platinum — and a checklist that remembers your progress. Works fully offline; no account, no network.</p>
+    <div class="progress-wrap" aria-label="Progress">
+      <div class="progress-numbers"><strong id="earnedCount">0</strong> of <span id="totalCount">55</span> earned &middot; <span id="gradeCounts"></span></div>
+      <div class="progress-bar"><div id="progressFill" style="width:0%"></div></div>
+      <p class="progress-note" id="progressNote"></p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" data-view="tracker" class="tab active" aria-pressed="true">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab" aria-pressed="false">Platinum roadmap</button>
+  <button type="button" data-view="sources" class="tab" aria-pressed="false">Sources &amp; notes</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="toolbar">
+      <label class="search">Search <input id="searchBox" type="search" placeholder="Trophy or mission name…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="crime">Crime &amp; free roam</option>
+          <option value="completion">Completion</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+      <span class="toolbar-actions">
+        <button id="exportBtn" type="button">Export progress</button>
+        <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+        <button id="resetBtn" type="button">Reset</button>
+      </span>
+    </div>
+    <p class="filter-note" id="filterNote"></p>
+    <div class="layout">
+      <ul id="trophyList" class="trophy-list"></ul>
+      <aside id="detail" class="detail" aria-live="polite">
+        <p class="detail-empty">Select a trophy to read its guide and sources.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">55 trophies, 1 platinum, 2 gold, 6 silver, 46 bronze. No online trophies — all 55 are single-player (KeenGamer). Expect around 200 hours (KeenGamer). There is no mission replay and no New Game Plus, so keep a manual save at the start of every chapter (OutputLag).</p>
+    <p class="missable-banner"><strong>Missable:</strong> exactly one trophy is flagged as potentially missable by the launch-era guides — <strong>Positive Mental Attitude</strong>. Lucia's balcony meditation spot in Chapter 1 disappears after that chapter (OutputLag). Meditate there during Chapter 1.</p>
+    <ol id="roadmapList" class="roadmap"></ol>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2>Sources &amp; notes</h2>
+    <div id="sourceList"></div>
+    <h3>How to read this guide</h3>
+    <ul class="notes">
+      <li>Names, descriptions and grades are the official PlayStation list as published on PSNProfiles and Exophase, cross-checked by PlanetGTA6 — the two lists agree on all 55.</li>
+      <li>Every guide is written for this entry in our own words and cites its sources beside it. A specific location or step with no source gets no credit from us either: where launch-era guides had not confirmed a method, the guide says so instead of inventing one.</li>
+      <li>28 of the 55 trophies are hidden on PlayStation until earned. With spoilers hidden, story trophies show as “Hidden story trophy” until you tick them earned.</li>
+      <li>Cheats disable trophies and saving (PowerPyx, via PlanetGTA6) — do not enable cheats on a platinum run.</li>
+      <li>Progress is saved in your browser (localStorage) and never leaves your machine except through Export, which downloads a file you can import back.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>An unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide is not affiliated with or endorsed by Rockstar Games. No official artwork or logos are used.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
